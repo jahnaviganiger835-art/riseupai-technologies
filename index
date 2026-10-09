@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160d35">
+<meta name="description" content="RiseUp AI Technologies — Building innovative AI tools and digital experiences. Created by Jahnavi.">
+<title>RiseUp AI Technologies</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+font-family:Arial,sans-serif;
+background:#100a27;
+color:#fff;
+line-height:1.6;
+}
+header{
+padding:20px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #302253;
+}
+.logo{font-size:21px;font-weight:bold;color:#bda4ff}
+.logo span{color:#75d7ff}
+nav a{color:#fff;text-decoration:none;margin-left:16px;font-size:14px}
+.hero{
+min-height:75vh;
+padding:90px 7%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(ellipse at top,#39216e 0%,#100a27 65%);
+}
+.tag{
+border:1px solid #7052b9;
+color:#bda4ff;
+border-radius:30px;
+padding:7px 15px;
+font-size:13px;
+margin-bottom:25px;
+}
+h1{font-size:clamp(38px,8vw,66px);line-height:1.12;margin-bottom:22px}
+h1 span{
+background:linear-gradient(90deg,#c5a7ff,#75d7ff);
+-webkit-background-clip:text;
+color:transparent;
+}
+.hero p{max-width:600px;color:#d0c9e2;font-size:17px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+.btn{
+display:inline-block;padding:13px 22px;border-radius:12px;
+text-decoration:none;font-weight:bold;font-size:14px;
+}
+.primary{background:linear-gradient(90deg,#8b5cf6,#53b9ee);color:#fff}
+.secondary{border:1px solid #77639e;color:#fff}
+section{padding:65px 7%}
+.section-title{text-align:center;font-size:32px;margin-bottom:12px}
+.section-desc{text-align:center;color:#b9b0d0;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{
+padding:25px;border:1px solid #352754;border-radius:18px;
+background:#1a1235;
+}
+.card .icon{font-size:30px;margin-bottom:12px}
+.card h3{margin-bottom:9px;color:#c5b1ff}
+.card p{font-size:14px;color:#c3bbd5}
+.about{
+max-width:750px;margin:auto;text-align:center;
+background:#1a1235;border:1px solid #352754;border-radius:20px;padding:30px;
+}
+.about p{color:#c3bbd5;margin-top:12px}
+footer{text-align:center;padding:30px 15px;border-top:1px solid #302253;color:#b9b0d0;font-size:13px}
+footer strong{color:#c5b1ff}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo">RiseUp <span>AI</span></div>
+  <nav><a href="#home">Home</a><a href="#projects">Projects</a><a href="#about">About</a></nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="tag">✦ INNOVATION STARTS HERE</div>
+  <h1>Ideas Today.<br><span>Intelligence Tomorrow.</span></h1>
+  <p>Welcome to RiseUp AI Technologies — a growing technology initiative exploring artificial intelligence, smart applications and bold digital ideas.</p>
+  <div class="buttons">
+    <a class="btn primary" href="#projects">Explore Projects ↗</a>
+    <a class="btn secondary" href="#about">Meet the Founder</a>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">What We're Building</h2>
+  <p class="section-desc">A vision for useful, accessible technology.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>RiseUp AI</h3>
+      <p>An AI companion designed to explore ideas, support learning and make technology easier to use.</p>
+    </div>
+    <div class="card">
+      <div class="icon">💡</div>
+      <h3>Future Innovations</h3>
+      <p>New concepts and experiments focused on solving everyday problems with technology.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Learning & Creativity</h3>
+      <p>Exploring tools that help people learn new skills, create and bring their ideas to life.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">Meet the Founder</h2>
+  <p class="section-desc">Every big idea starts somewhere.</p>
+  <div class="about">
+    <div class="icon">💜</div>
+    <h2>Created by Jahnavi</h2>
+    <p>RiseUp AI Technologies is a personal technology initiative built with curiosity, creativity and a vision for the future. The journey begins with one idea and grows with every step.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 <strong>RiseUp AI Technologies</strong></p>
+  <p>Created with 💜 by Jahnavi</p>
+</footer>
+</body>
+</html>
