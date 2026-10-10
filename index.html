@@ -1,60 +1,204 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RiseUp AI | Created by Jahnavi</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f3ff;
-      color: #29213c;
-      text-align: center;
-    }
-    header {
-      background: #482a82;
-      color: white;
-      padding: 28px 16px;
-    }
-    header h1 { margin: 0; font-size: 32px; }
-    header p { margin-bottom: 0; }
-    main { padding: 30px 18px; }
-    .card {
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 25px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px #d9d0ee;
-    }
-    button {
-      background: #6c4cbe;
-      color: white;
-      border: 0;
-      border-radius: 12px;
-      padding: 13px 20px;
-      font-size: 16px;
-      margin: 6px;
-      cursor: pointer;
-    }
-    footer { padding: 25px; color: #6b627a; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7041c5">
+<meta name="description" content="RiseUp AI - Your AI companion for a better tomorrow. Learn, create and grow with AI.">
+<title>RiseUp AI — Learn, Create, Grow</title>
+<style>
+:root {
+  --purple: #7041c5;
+  --dark: #49248b;
+  --light: #f5f0ff;
+  --text: #29213a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #faf8ff;
+  color: var(--text);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 6%;
+  background: white;
+  border-bottom: 1px solid #eee7fb;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.logo {
+  width: 43px; height: 43px; border-radius: 14px;
+  display: grid; place-items: center;
+  color: white; font-size: 25px; font-weight: bold;
+  background: linear-gradient(135deg, #9870ef, #5427a0);
+}
+.brand h2 { margin: 0; font-size: 21px; color: var(--dark); }
+.tag { color: #806c9d; font-size: 11px; }
+main { max-width: 850px; margin: auto; padding: 34px 18px; }
+.hero { text-align: center; padding: 20px 0 28px; }
+.pill {
+  display: inline-block; background: #eee5ff; color: var(--dark);
+  border-radius: 30px; padding: 7px 13px; font-size: 12px;
+}
+h1 {
+  font-size: clamp(32px, 7vw, 49px);
+  line-height: 1.13; letter-spacing: -1.5px;
+  margin: 18px 0 12px;
+}
+.gradient {
+  background: linear-gradient(90deg, #7542d2, #a05ce8);
+  color: transparent; background-clip: text;
+}
+.hero p { color: #766b87; line-height: 1.7; }
+.chat {
+  background: white; border: 1px solid #e8defa;
+  border-radius: 24px; padding: 22px;
+  box-shadow: 0 12px 35px #54309812;
+}
+.welcome { display: flex; gap: 12px; align-items: flex-start; }
+.bot {
+  flex-shrink: 0; background: var(--light); padding: 10px;
+  border-radius: 13px; font-size: 23px;
+}
+.welcome h3 { margin: 3px 0 5px; }
+.welcome p { margin: 0; font-size: 14px; color: #786e88; }
+#answer {
+  display: none; white-space: pre-wrap; line-height: 1.65;
+  margin-top: 20px; padding: 15px; background: #faf7ff;
+  border-radius: 14px; overflow-wrap: anywhere;
+}
+.input-row {
+  display: flex; gap: 8px; margin-top: 22px;
+  border: 1px solid #ded1f6; border-radius: 17px;
+  padding: 7px; align-items: center;
+}
+#question {
+  width: 100%; min-width: 0; border: 0; outline: 0;
+  padding: 10px; font: inherit; background: transparent;
+}
+#send {
+  flex-shrink: 0; border: 0; border-radius: 13px;
+  width: 45px; height: 45px; background: var(--purple);
+  color: white; font-size: 23px; cursor: pointer;
+}
+#send:disabled { opacity: .6; }
+.note { font-size: 11px; color: #9488a6; text-align: center; }
+.section-title { margin: 34px 0 15px; font-size: 21px; }
+.features {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.feature {
+  background: white; border: 1px solid #eee7fa;
+  padding: 17px 10px; border-radius: 18px;
+  text-align: center; cursor: pointer; color: var(--text);
+  font: inherit; transition: .2s;
+}
+.feature:hover { border-color: #bba0ed; transform: translateY(-2px); }
+.feature span { display: block; font-size: 27px; margin-bottom: 8px; }
+.feature strong { font-size: 13px; }
+.feature small { display: block; margin-top: 5px; color: #8b7b9d; font-size: 11px; }
+footer { text-align: center; padding: 25px 10px; color: #8b7b9d; font-size: 13px; }
+footer strong { color: var(--dark); }
+@media(max-width: 480px) {
+  main { padding: 22px 14px; }
+  .features { grid-template-columns: repeat(2, 1fr); }
+  .chat { padding: 16px; }
+  .brand h2 { font-size: 19px; }
+}
+</style>
 </head>
 <body>
-  <header>
-    <h1>💜 RiseUp AI</h1>
-    <p>Your AI companion for a better tomorrow</p>
-  </header>
-  <main>
-    <div class="card">
-      <h2>Dream Big. Rise Higher.</h2>
-      <p>Your journey towards learning, creativity and innovation starts here.</p>
-      <button onclick="alert('Welcome to RiseUp AI!')">Get Started</button>
-      <button onclick="alert('More features coming soon!')">Explore Features</button>
+<header>
+  <div class="brand">
+    <div class="logo">↑</div>
+    <div>
+      <h2>RiseUp AI</h2>
+      <div class="tag">Learn · Create · Grow</div>
     </div>
-  </main>
-  <footer>Created with 💜 by Jahnavi</footer>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <span class="pill">✦ Your AI-powered learning partner</span>
+    <h1>Your AI companion<br>for a <span class="gradient">better tomorrow.</span></h1>
+    <p>Learn new things, explore ideas, and turn your curiosity into progress.</p>
+  </section>
+
+  <section class="chat">
+    <div class="welcome">
+      <div class="bot">✦</div>
+      <div>
+        <h3>Hi there! 👋</h3>
+        <p>I'm RiseUp AI. What would you like to learn or create today?</p>
+      </div>
+    </div>
+    <div id="answer" role="status" aria-live="polite"></div>
+    <form id="chatForm" class="input-row">
+      <input id="question" type="text" placeholder="Ask RiseUp AI anything..." autocomplete="off" required>
+      <button id="send" type="submit" aria-label="Send message">➤</button>
+    </form>
+    <p class="note">Your ideas can take you anywhere ✨</p>
+  </section>
+
+  <h2 class="section-title">Explore your possibilities</h2>
+  <section class="features">
+    <button class="feature" data-prompt="Explain this topic in simple language with examples: ">
+      <span>📚</span><strong>Study Help</strong><small>Learn step by step</small>
+    </button>
+    <button class="feature" data-prompt="Teach me coding as a beginner: ">
+      <span>💻</span><strong>Coding</strong><small>Build your skills</small>
+    </button>
+    <button class="feature" data-prompt="Help me understand an image.">
+      <span>📸</span><strong>Explain Images</strong><small>Understand visuals</small>
+    </button>
+    <button class="feature" data-prompt="Help me create an AI image about: ">
+      <span>🎨</span><strong>AI Images</strong><small>Bring ideas to life</small>
+    </button>
+    <button class="feature" data-prompt="Help me prepare content for a PDF about: ">
+      <span>📄</span><strong>Create PDF</strong><small>Organize your notes</small>
+    </button>
+    <button class="feature" data-prompt="Help me prepare a presentation about: ">
+      <span>📊</span><strong>Create PPT</strong><small>Plan your slides</small>
+    </button>
+  </section>
+</main>
+
+<footer>
+  Made with 💜 for curious minds<br><br>
+  <strong>Created by Jahnavi</strong><br>
+  © <span id="year"></span> RiseUp AI
+</footer>
+
+<script>
+const input = document.getElementById("question");
+const answer = document.getElementById("answer");
+const send = document.getElementById("send");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll(".feature").forEach(button => {
+  button.addEventListener("click", () => {
+    input.value = button.dataset.prompt;
+    input.focus();
+    document.querySelector(".chat").scrollIntoView({behavior: "smooth"});
+  });
+});
+
+document.getElementById("chatForm").addEventListener("submit", event => {
+  event.preventDefault();
+  const question = input.value.trim();
+  if (!question) return;
+
+  answer.style.display = "block";
+  answer.textContent =
+    "Your message: " + question +
+    "\n\nThe AI chat service has not been connected to this website yet. Connect a secure AI backend to receive real AI answers.";
+});
+</script>
 </body>
 </html>
